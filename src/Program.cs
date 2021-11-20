@@ -6,7 +6,7 @@ namespace Join
     {
         public static void Main(string[] args)
         {
-            if (args != null && (args[0] == "--help" || args[0] == "/h" || args.Length > 1))
+            if (args != null && args.Length > 0 && (args[0] == "--help" || args[0] == "--help" || args[0] == "/h" || args[0] == "/help" || args.Length > 1))
             {
                 Console.WriteLine();
                 Console.WriteLine("Usage: join [delimiter]");
@@ -15,15 +15,15 @@ namespace Join
                 Console.WriteLine("All lines will be trimmed for whitespace, and returned as a continuous string.");
                 Console.WriteLine();
                 Console.WriteLine("Example: type file-with-multiple-lines.txt | join");
-                Console.WriteLine("         Will return the lines content separated with a single space: \"a b c d\"");
+                Console.WriteLine("         Will return the lines separated with a single space: \"a b c d\"");
                 Console.WriteLine();
                 Console.WriteLine("Example: type file-with-multiple-lines.txt | join \", \"");
-                Console.WriteLine("         Will return the lines content separated with the provided string: \"a, b, c, d\"");
+                Console.WriteLine("         Will return the lines separated with the provided string: \"a, b, c, d\"");
                 return;
             }
 
             string lineInput;
-            string delimiterInput = args?[0] ?? " ";
+            string delimiterInput = args.Length == 1 ? args[0] : " ";
             string delimiter = "";
             while ((lineInput = Console.ReadLine()) != null)
             {

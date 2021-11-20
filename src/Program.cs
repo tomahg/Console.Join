@@ -6,7 +6,12 @@ namespace Join
     {
         public static void Main(string[] args)
         {
-            if (args != null && args.Length > 0 && (args[0] == "--help" || args[0] == "--help" || args[0] == "/h" || args[0] == "/help" || args.Length > 1))
+            if (args == null)
+            {
+                return;
+            }
+
+            if (args.Length > 0 && (args[0] == "--help" || args[0] == "--help" || args[0] == "/h" || args[0] == "/help" || args.Length > 1))
             {
                 Console.WriteLine();
                 Console.WriteLine("Usage: join [delimiter]");
@@ -25,6 +30,7 @@ namespace Join
             string lineInput;
             string delimiterInput = args.Length == 1 ? args[0] : " ";
             string delimiter = "";
+
             while ((lineInput = Console.ReadLine()) != null)
             {
                 Console.Write(delimiter + lineInput.Trim());

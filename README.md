@@ -31,7 +31,7 @@ one, two, three
 ```
 
 ## Trim
-If the input contains leading/trailing whitespace, like this file. `messy-input.txt`
+If the input contains leading/trailing whitespace, like this.
 ```
  one
          two    

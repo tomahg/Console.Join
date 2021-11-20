@@ -9,7 +9,7 @@ two
 three
 ```
 ## Default delimiter
-Input
+Usage
 ```bash
 type input.txt join
 ```
@@ -20,7 +20,7 @@ one two three
 ```
 
 ## Specified delimiter
-Input
+Usage
 ```bash
 type input.txt join ", "
 ```

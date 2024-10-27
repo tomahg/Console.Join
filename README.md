@@ -8,21 +8,21 @@ one
 two
 three
 ```
-## Default delimiter
+## Without delimiter
 Usage
 ```bash
-type input.txt join
+type input.txt | join
 ```
 
 Output
 ```
-one two three 
+onetwothree 
 ```
 
 ## Specified delimiter
 Usage
 ```bash
-type input.txt join ", "
+type input.txt | join ", "
 ```
 
 Output
@@ -40,5 +40,5 @@ If the input contains leading/trailing whitespace, like this.
 
 Every line will be trimmed before joining them.
 ```
-one two three 
+onetwothree 
 ```
